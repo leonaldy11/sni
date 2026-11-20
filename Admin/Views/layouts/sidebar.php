@@ -1,6 +1,6 @@
 <?php
     $currentPage = $_SERVER['REQUEST_URI']; 
-    $page = "/sni/admin/";
+    $page = "/sni/Admin/";
 ?>
 
 <div class="sidebar-header">
@@ -22,9 +22,13 @@
         <span class="nav-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
         <span class="nav-text">Welding Consumables</span>
     </a>
-    <a class="nav-link <?= $currentPage == $page.'materials' ? 'active' : '' ?>" href="<?php echo URL; ?>material">
+    <a class="nav-link <?= $currentPage == $page.'material' ? 'active' : '' ?>" href="<?php echo URL; ?>material">
         <span class="nav-icon"><i class="bi bi-person-plus" aria-hidden="true"></i></span>
         <span class="nav-text">Tools & Materials</span>
+    </a>
+    <a class="nav-link <?= $currentPage == $page.'employee' ? 'active' : '' ?>" href="<?php echo URL; ?>employee">
+        <span class="nav-icon"><i class="bi bi-person-plus" aria-hidden="true"></i></span>
+        <span class="nav-text">Employee</span>
     </a>
     
     </nav>

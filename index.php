@@ -20,8 +20,15 @@ switch ($route) {
         break;
 
     // ADMIN
-    //dashboard
+    //login
     case '/admin':
+        require_once CONTROLLER_PATH . 'LoginController.php';
+        $controller = new LoginController();
+        $controller->index();
+        break;
+    //end 
+    //dashboard
+    case '/admin/dashboard':
         require_once CONTROLLER_PATH . 'DashboardController.php';
         $controller = new DashboardController();
         $controller->index();
@@ -99,6 +106,23 @@ switch ($route) {
         $controller->delete($id);
         break;
     //end MATERIAL
+    //employee
+    case '/admin/employee':
+        require_once CONTROLLER_PATH . 'EmployeeController.php';
+        $controller = new EmployeeController();
+        $controller->index();
+        break;
+    case '/admin/employee/getdata':
+        require_once CONTROLLER_PATH . 'EmployeeController.php';
+        $controller = new EmployeeController();
+        $controller->getData();
+        break;
+    case '/admin/employee/store':
+        require_once CONTROLLER_PATH . 'EmployeeController.php';
+        $controller = new EmployeeController();
+        $controller->store();
+        break;
+    
     default:
         http_response_code(404);
         echo "404 - Halaman tidak ditemukan";
