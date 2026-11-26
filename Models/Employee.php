@@ -37,4 +37,8 @@ class Employee
 
         return mysqli_stmt_execute($stmt);
     }
+
+    public function show($id){
+        $query = "SE"
+    }
 }

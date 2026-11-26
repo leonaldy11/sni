@@ -46,4 +46,6 @@ class EmployeeController {
             ]);
         }
     }
+
+    public function show($)
 }

@@ -90,3 +90,23 @@ $("#saveButton").click(function(){
         }
     })
 })
+
+function editData(id){
+    $.ajax({
+        url : employeeUrl + '/show/' + id,
+        method : "GET",
+        dataType : "JSON",
+        success : function(response){
+            if(response.success){
+                $("#id").val(response.data.id);
+                $("#name_edit").val(response.data.name);
+                $("#username_edit").val(response.data.username)
+            } else {
+                alert("Data not found")
+            }
+        },error : function(status, xhr, error){
+            console.error('Error fetching material data:', error);
+            alert('An error occurred while fetching the employee data.');
+        }
+    });
+}

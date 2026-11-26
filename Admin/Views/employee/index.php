@@ -113,12 +113,13 @@ $title = "Welding Consumables";
                               <div class="col-md-12">
                                   <input class="form-control" type="hidden" name="id" id="id">
                                   <label class="form-label" for="formEmail">Name</label>
-                                  <input class="form-control" type="text" name="name_edit" id="nameEdit" required>
+                                  <input class="form-control" type="text" name="name_edit" id="name_edit" required>
                                   <div class="invalid-feedback">Valid name is required.</div>
                               </div>
                               <div class="col-md-12">
-                                  <label class="form-label" for="formEmail">Description</label>
-                                  <textarea class="form-control" rows="3" name="description_edit" id="descriptionEdit"></textarea>
+                                  <label class="form-label" for="formEmail">Username</label>
+                                  <input class="form-control" type="text" name="username" id="username_edit" required>
+                                  <div class="invalid-feedback">Valid username is required.</div>
                               </div>
                           </div>
                         </div>

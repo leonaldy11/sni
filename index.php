@@ -16,7 +16,7 @@ switch ($route) {
 
     // USER
     case '/':
-        require_once PAGE_PATH . 'home.php';
+            require_once PAGE_PATH . 'index.php';
         break;
 
     // ADMIN
